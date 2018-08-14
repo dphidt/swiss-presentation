@@ -1,0 +1,32 @@
+---
+title: "Swiss Fertility Data"
+author: "Andrew M."
+date: "8/13/2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+library(datasets)
+```
+
+## Fertility in 1888 Switzerland
+
+In this presentation, we'll take a look at fertility in 47 French-speaking
+provinces of Switzerland, c. 1888 (the `swiss` dataset), specifically
+in terms of:
+
+* **Fertility:** Common standardized fertility measure
+* **Agriculture:** % of males involved in agriculture as occupation
+* **Education:** % education beyond primary school for draftees.
+
+## Fertility in 1888 Switzerland 
+
+Fertility in 47 French-speaking provinces of Switzerland, c. 1888:
+```{r message=F}
+plot_ly(swiss, x=~Education, y=~Fertility, color=~Agriculture)
+```
+
+**Source:** `swiss` dataset, R `datasets` package.
+
